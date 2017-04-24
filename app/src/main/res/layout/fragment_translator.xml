@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/blockTranslator"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@android:color/white">
+
+    <RelativeLayout
+        android:id="@+id/langChoose"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:orientation="horizontal"
+        android:background="@color/orangeMain">
+
+        <ImageButton
+            android:id="@+id/reverseLangs"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/content_button_reverseLangs"
+            android:background="@mipmap/swape_langs"/>
+
+        <Spinner
+            style="@style/SpinnerAsEditText"
+            android:id="@+id/langFrom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/reverseLangs"
+            android:layout_toStartOf="@id/reverseLangs"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:background="@color/transparent"/>
+
+        <Spinner
+            style="@style/SpinnerAsEditText"
+            android:id="@+id/langTo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@id/reverseLangs"
+            android:layout_toRightOf="@id/reverseLangs"
+            android:layout_centerVertical="true"
+            android:textAlignment="center"
+            android:background="@color/transparent"/>
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/typeText"
+        android:layout_width="match_parent"
+        android:layout_height="125dp"
+        android:layout_margin="5dp"
+        android:padding="7dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/langChoose"
+        android:gravity="start"
+        android:inputType="textMultiLine"
+        android:textColor="#000000"
+        android:background="@drawable/edittext_border"
+
+        android:hint="@string/hint_typeText"/>
+
+    <ImageButton
+        android:id="@+id/clearText"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        android:layout_margin="5dp"
+        android:background="@mipmap/clear_text"
+        android:layout_alignBottom="@+id/typeText"
+        android:layout_alignLeft="@+id/typeText"
+        android:layout_alignStart="@+id/typeText"
+        android:contentDescription="@string/content_button_clearText"/>
+
+    <ScrollView
+        android:id="@+id/textViews_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/typeText" >
+
+        <TextView
+            android:id="@+id/seeText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:textIsSelectable="true"
+            android:textColor="#000000"
+            android:autoLink="web" />
+
+    </ScrollView>
+</RelativeLayout>
