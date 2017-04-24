@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="ru.magicwolf.yandextranslate.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/buttonsContainer"/>
+
+    <LinearLayout
+        android:id="@+id/buttonsContainer"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/top_border_line">
+
+        <ImageButton
+            android:id="@+id/buttonTranslator"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingTop="2dp"
+            android:layout_weight="1"
+            android:paddingBottom="2dp"
+            android:scaleType="fitCenter"
+            android:background="@color/transparent"
+            android:contentDescription="@string/content_button_translator"
+            android:src="@mipmap/translate_logo"/>
+
+        <ImageButton
+            android:id="@+id/buttonHistory"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:paddingTop="2dp"
+            android:paddingBottom="2dp"
+            android:scaleType="fitCenter"
+            android:src="@mipmap/added_bookmark"
+            android:contentDescription="@string/content_button_history"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+</RelativeLayout>

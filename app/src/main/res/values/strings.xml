@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">YandexTranslate</string>
+    <string name="content_button_translator">translate logo</string>
+    <string name="content_button_history">added bookmark</string>
+    <string name="content_button_clearHistory">clear history</string>
+    <string name="content_button_AddToFavorite">bookmark</string>
+    <string name="content_button_reverseLangs">swape langs</string>
+    <string name="content_button_clearText">clear text</string>
+    <string name="text_button_history_list">История</string>
+    <string name="text_button_favorite_list">Избранное</string>
+    <string name="hint_typeText">Ведите текст</string>
+</resources>
